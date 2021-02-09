@@ -9,4 +9,26 @@
 
 
 //2. Simplified version using the ternary operator:
-for(let i=0;i<100;)console.log((++i%3?'':'CLX')+(i%5?'':'DTC')||i)
+// for(let i=0;i<100;)console.log((++i%3?'':'CLX')+(i%5?'':'DTC')||i)
+
+
+//3. Reusable version:
+
+const divisibleBy = function(index,num){
+    if(index%num === 0){
+        return true;
+    }
+}
+let challengeCustom = function(str1, str2, n1, n2, start, end){
+    for(let i=start;i<=end;i++){
+        if(divisibleBy(i,(n1*n2))){
+            console.log(str1+str2);
+        } else if(divisibleBy(i,n1)){
+            console.log(str1);
+        } else if(divisibleBy(i,n2)){
+            console.log(str2)
+        }else console.log(i);
+    }
+    return
+}
+challengeCustom("CLX", "DTC", 3, 5, 1, 100);
