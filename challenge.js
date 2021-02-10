@@ -19,7 +19,7 @@ const divisibleBy = function(index,num){
         return true;
     }
 }
-let challengeCustom = function(str1, str2, n1, n2, start, end){
+const challengeCustom = function(str1, str2, n1, n2, start, end){
     for(let i=start;i<=end;i++){
         if(divisibleBy(i,(n1*n2))){
             console.log(str1+str2);
